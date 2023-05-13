@@ -9,36 +9,36 @@ use Facebook\WebDriver\WebDriverBy;
 
 class SampleTest extends TestCase
 {
-    // public function testCookie()
-    // {
-    //     // selenium
-    //     $host = 'http://172.17.0.1:4444/wd/hub'; #Github Actions上で実行可能なHost
-    //     // chrome ドライバーの起動
-    //     $driver = RemoteWebDriver::create($host, DesiredCapabilities::chrome());
-    //     // 指定URLへ遷移 (Google)
-    //     $driver->get('http://php/src/cookie1.php');
+    public function testCookie()
+    {
+        // selenium
+        $host = 'http://172.17.0.1:4444/wd/hub'; #Github Actions上で実行可能なHost
+        // chrome ドライバーの起動
+        $driver = RemoteWebDriver::create($host, DesiredCapabilities::chrome());
+        // 指定URLへ遷移 (Google)
+        $driver->get('http://php/src/cookie1.php');
 
-    //     // **cookie1.php**
-    //     // テキストボックスの要素を取得
-    //     $element_user = $driver->findElement(WebDriverBy::xpath('//html/body/form/input[1]'));
-    //     // テキストボックスの要素に値を入力
-    //     $element_user->sendKeys('神戸');
+        // **cookie1.php**
+        // テキストボックスの要素を取得
+        $element_user = $driver->findElement(WebDriverBy::xpath('//html/body/form/input[1]'));
+        // テキストボックスの要素に値を入力
+        $element_user->sendKeys('神戸');
 
-    //     // 画面遷移実行
-    //     $element_user->submit();
+        // 画面遷移実行
+        $element_user->submit();
 
-    //     // **cookie2.php**
-    //     // リンクをクリック
-    //     $driver->findElement(WebDriverBy::xpath('//html/body/a[1]'))->click();
+        // **cookie2.php**
+        // リンクをクリック
+        $driver->findElement(WebDriverBy::xpath('//html/body/a[1]'))->click();
 
-    //     // **cookie3.php**
-    //     // pタグの要素を取得
-    //     $element_cookie = $driver->findElement(WebDriverBy::xpath('//html/body/p'));
-    //     $this->assertStringContainsString("神戸", $element_cookie->getText());
+        // **cookie3.php**
+        // pタグの要素を取得
+        $element_cookie = $driver->findElement(WebDriverBy::xpath('//html/body/p'));
+        $this->assertStringContainsString("神戸", $element_cookie->getText());
 
-    //     // ブラウザを閉じる
-    //     $driver->close();
-    // }
+        // ブラウザを閉じる
+        $driver->close();
+    }
 
     public function testSession()
     {
